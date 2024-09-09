@@ -1,0 +1,117 @@
+body {
+    background: radial-gradient(
+        circle at center,
+        #353a46 0%,
+        #21242e 40%,
+        #1a1c24 80%
+    );
+    margin: 0;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#player {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.title-row {
+    display: block;
+    width: 100%;
+}
+
+.row {
+    height: 200px;
+}
+
+.row .title-row {
+    height: 20px;
+    color: white;
+    font-size: 24px;
+    font-family: sans-serif;
+    margin-top: 60px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.row .clip-container {
+    display: flex;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    box-sizing: border-box;
+    display: inline-block;
+    object-fit: cover;
+    width: auto;
+    height: 200px;
+    padding: 15px 20px;
+    transform: scale(1);
+    transition: transform 0.15s ease-in-out;
+}
+
+.title#highlighted {
+    transform: scale(1.1);
+    transition: transform 0.15s ease-in-out;
+}
+
+.title .video,
+.title .backup-image {
+    display: none;
+}
+
+.title .image {
+    height: 100%;
+    width: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.title#highlighted .image {
+    display: none;
+}
+
+.title#highlighted .video,
+.title#highlighted .backup-image {
+    height: 100%;
+    width: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.titleHeader {
+    font-family: sans-serif;
+    padding: 20px;
+    margin-top: -70px;
+    display: none;
+    color: white;
+    font-size: 23px;
+    align-items: center;
+    height: 80px;
+    text-shadow: 2px 2px 3px black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title#highlighted .titleHeader {
+    display: block;
+}
