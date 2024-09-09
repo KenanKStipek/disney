@@ -24,6 +24,5 @@ module.exports = {
     static: "./",
     compress: true,
     port: 9000,
-    hot: true,
   },
 };

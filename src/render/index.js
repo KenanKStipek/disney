@@ -1,7 +1,7 @@
-import { fetchListing } from "../api";
-import { getRefIds, getTitles } from "../utils";
-import { store } from "../store";
-import { Listing } from "../components";
+import { fetchListing } from "../api/index.js";
+import { getRefIds, getTitles } from "../utils.js";
+import { store } from "../store/index.js";
+import { Listing } from "../components/index.js";
 
 export const render = (listings) => {
   const listingIds = getRefIds(listings);
@@ -9,6 +9,11 @@ export const render = (listings) => {
   const backgroundPlayer = document.createElement("video");
   backgroundPlayer.id = "player";
   document.getElementById("root").appendChild(backgroundPlayer);
+
+  const instructions = document.createElement("div");
+  instructions.id = "instructions";
+  instructions.innerText = "Use the arrow keys and space bar";
+  document.getElementById("root").appendChild(instructions);
 
   // Render each section with loading state
   listingIds.forEach((_, setIndex) => {

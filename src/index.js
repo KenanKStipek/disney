@@ -1,6 +1,6 @@
-import { fetchListings } from "./api";
-import { render } from "./render";
-import { Input } from "./components";
+import { fetchListings } from "./api/index.js";
+import { render } from "./render/index.js";
+import { Input } from "./components/index.js";
 
 const handleInput = () => {
   Input();

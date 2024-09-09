@@ -1,6 +1,6 @@
-import { store } from "../store";
-import { bound } from "../utils";
-import { updateHighlight, showTheater, hideTheater } from "./listing";
+import { store } from "../store/index.js";
+import { bound } from "../utils.js";
+import { updateHighlight, showTheater, hideTheater } from "./listing.js";
 
 const ARROW_RIGHT = "ArrowRight";
 const ARROW_LEFT = "ArrowLeft";

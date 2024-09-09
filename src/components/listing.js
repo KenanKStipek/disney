@@ -81,7 +81,7 @@ export const hideTheater = () => {
   const player = document.getElementById("player");
   const root = document.getElementById("root");
 
-  // Recreate player at root to remove video
+  // Recreate player at root to remove video from view.
   root.removeChild(player);
   const newPlayer = document.createElement("video");
   newPlayer.id = "player";
